@@ -6,6 +6,8 @@ const slots = [
   { label: "video-2", src: "/videos/review-2.mp4", poster: "/videos/review-2-poster.jpg" },
   { label: "video-3", src: "/videos/review-3.mp4", poster: "/videos/review-3-poster.jpg" },
   { label: "video-4", src: "/videos/review-4.mp4", poster: "/videos/review-4-poster.jpg" },
+  { label: "video-5", src: "/videos/review-5.mp4", poster: "/videos/review-5-poster.jpg" },
+  { label: "video-6", src: "/videos/review-6.mp4", poster: "/videos/review-6-poster.jpg" },
 ] as const;
 
 function VideoSlot({ label, src, poster }: { label: string; src: string; poster: string }) {
@@ -66,7 +68,7 @@ export default function Reviews() {
           кто уже внутри работы
         </h2>
 
-        <div className="-mx-5 mt-12 flex gap-4 overflow-x-auto px-5 pb-4 snap-x snap-mandatory sm:mx-0 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
+        <div className="-mx-5 mt-12 flex gap-4 overflow-x-auto px-5 pb-4 snap-x snap-mandatory sm:mx-0 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
           {slots.map((slot) => (
             <VideoSlot key={slot.label} {...slot} />
           ))}
