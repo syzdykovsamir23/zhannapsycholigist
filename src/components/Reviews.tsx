@@ -1,15 +1,16 @@
 import { useRef, useState } from "react";
 import { IconPlay } from "./icons";
 
+const REVIEWS_BASE =
+  "https://lomsnybfbpvwklfgxgcl.supabase.co/storage/v1/object/public/zhanna-bucket";
+
 const slots = [
-  { label: "video-1", src: "/videos/review-1.mp4", poster: "/videos/review-1-poster.jpg" },
-  { label: "video-2", src: "/videos/review-2.mp4", poster: "/videos/review-2-poster.jpg" },
-  { label: "video-3", src: "/videos/review-3.mp4", poster: "/videos/review-3-poster.jpg" },
-  { label: "video-4", src: "/videos/review-4.mp4", poster: "/videos/review-4-poster.jpg" },
-  { label: "video-5", src: "/videos/review-5.mp4", poster: "/videos/review-5-poster.jpg" },
-  { label: "video-6", src: "/videos/review-6.mp4", poster: "/videos/review-6-poster.jpg" },
-  { label: "video-7", src: "/videos/review-7.mp4", poster: "/videos/review-1-poster.jpg" },
-  { label: "video-8", src: "/videos/review-8.mp4", poster: "/videos/review-2-poster.jpg" },
+  { label: "video-1", src: `${REVIEWS_BASE}/review-1.mp4`, poster: `${REVIEWS_BASE}/review-1-poster.jpg` },
+  { label: "video-2", src: `${REVIEWS_BASE}/review-2.mp4`, poster: `${REVIEWS_BASE}/review-2-poster.jpg` },
+  { label: "video-3", src: `${REVIEWS_BASE}/review-3.mp4`, poster: `${REVIEWS_BASE}/review-3-poster.jpg` },
+  { label: "video-4", src: `${REVIEWS_BASE}/review-4.mp4`, poster: `${REVIEWS_BASE}/review-4-poster.jpg` },
+  { label: "video-5", src: `${REVIEWS_BASE}/review-5.mp4`, poster: `${REVIEWS_BASE}/review-5-poster.jpg` },
+  { label: "video-6", src: `${REVIEWS_BASE}/review-6.mp4`, poster: `${REVIEWS_BASE}/review-6-poster.jpg` },
 ] as const;
 
 function VideoSlot({ label, src, poster }: { label: string; src: string; poster: string }) {
