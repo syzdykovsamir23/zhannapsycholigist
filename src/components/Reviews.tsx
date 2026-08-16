@@ -8,6 +8,8 @@ const slots = [
   { label: "video-4", src: "/videos/review-4.mp4", poster: "/videos/review-4-poster.jpg" },
   { label: "video-5", src: "/videos/review-5.mp4", poster: "/videos/review-5-poster.jpg" },
   { label: "video-6", src: "/videos/review-6.mp4", poster: "/videos/review-6-poster.jpg" },
+  { label: "video-7", src: "/videos/review-7.mp4", poster: "/videos/review-1-poster.jpg" },
+  { label: "video-8", src: "/videos/review-8.mp4", poster: "/videos/review-2-poster.jpg" },
 ] as const;
 
 function VideoSlot({ label, src, poster }: { label: string; src: string; poster: string }) {
